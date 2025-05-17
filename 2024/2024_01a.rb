@@ -1,15 +1,15 @@
-t_file = open("2024_01a_input.txt")
+t_file = open("2024_01a_input.txt") # why not just stdin?
 
 left_list = []
 right_list = []
 
-for line in t_file
-  tmp = line.strip.split("   ")
+for line in STDIN # stcin for the stdwin
+  tmp = line.strip.split() # why not just split?!?!?!
   left_list.push(tmp[0].to_i)
   right_list.push(tmp[1].to_i)
 end
 
-left_list.sort!
+left_list.sort! # you can get away without a sort if you use a min/max heap
 right_list.sort!
 
 diff_total = 0 

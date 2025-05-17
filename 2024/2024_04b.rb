@@ -1,9 +1,7 @@
-# t_file = open("2024_04a_input.txt")
-t_file = open("2024_04a_input_test.txt")
 
 lines = []
 
-for line in t_file
+for line in STDIN
   tmp = line.strip
   lines.push(tmp)
 end
@@ -30,14 +28,14 @@ for r in 1..(ROW_COUNT-2)
     # Diagonal Down/Right
     found = 0
     
-    diag1_word = lines[r][c] + lines[r+1][c+1] + lines[r-1][c-1]
+    diag1_word = lines[r+1][c+1] + lines[r][c] + lines[r-1][c-1]
     
     if diag1_word == WORD or diag1_word.reverse == WORD 
       found = found + 1
     end
     
     # Diagonal Up/Right
-    diag2_word = lines[r][c] + lines[r-1][c+1] + lines[r+1][c-1]
+    diag2_word = lines[r-1][c+1] + lines[r][c] + lines[r+1][c-1]
 
     if diag2_word == WORD or diag2_word.reverse == WORD
       found = found + 1

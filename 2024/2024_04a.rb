@@ -1,9 +1,6 @@
-# t_file = open("2024_04a_input.txt")
-t_file = open("2024_04a_input_test.txt")
-
 lines = []
 
-for line in t_file
+for line in STDIN
   tmp = line.strip
   lines.push(tmp)
 end

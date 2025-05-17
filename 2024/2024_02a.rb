@@ -1,8 +1,8 @@
-t_file = open("2024_02a_input.txt")
+number_of_inc_dec_lines = 0
 
 lines = []
 
-for line in t_file
+for line in STDIN
   tmp = line.strip.split(" ")
   
   tmp_nums = []

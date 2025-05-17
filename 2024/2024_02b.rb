@@ -1,5 +1,3 @@
-t_file = open("2024_02a_input.txt")
-
 lines = []
 
 def breaks_rules(line)
@@ -21,7 +19,7 @@ def breaks_rules(line)
   return false
 end
 
-for line in t_file
+for line in STDIN
   tmp = line.strip.split(" ")
   
   tmp_nums = []
